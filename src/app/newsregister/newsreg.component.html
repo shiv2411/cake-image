@@ -1,0 +1,51 @@
+<title>Contact</title>
+
+<mat-card class="outercard">
+    <mat-card-title>
+        News Register Form
+      </mat-card-title>
+  <mat-card class="innercard">
+        <form (ngSubmit)="Newsreg(SignupForm)" #SignupForm="ngForm">
+          <mat-form-field>
+            <input type="text"
+                    matInput
+                    name="heading"
+                    ngModel
+                    placeholder="News Heading"
+                    #head= "ngModel" required>
+            <mat-error *ngIf="head.invalid">Please Enter the News Heading!</mat-error>
+          </mat-form-field> <br> <br>
+
+          <mat-form-field>
+              <input type="text"
+                      matInput
+                      name="subheading"
+                      ngModel
+                      placeholder="News Subheading(if any)"
+                      #subhead= "ngModel">
+              <mat-error *ngIf="subhead.invalid">Please Enter the subheading(if any)!</mat-error>
+            </mat-form-field> <br><br>
+
+            <mat-form-field>
+                <input type="text"
+                        matInput
+                        name="content"
+                        ngModel
+                        placeholder="News content"
+                        #head= "ngModel" required>
+                <mat-error *ngIf="head.invalid">Please Enter the News Content!</mat-error>
+              </mat-form-field> <br> <br>
+
+              <div class="img" >
+                <h6>Please choose your image file</h6>
+                <input type="file" name="image" (change)="selectedImage($event)">
+              </div> <br> <br>
+
+            <div class="butn">
+            <button mat-button><b>Submit</b></button>
+          </div>
+        </form> <br>
+  </mat-card>
+</mat-card>
+
+<!-- <router-outlet></router-outlet> -->

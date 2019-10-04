@@ -1,0 +1,51 @@
+<title>Contact</title>
+
+<mat-card class="outercard">
+    <mat-card-title>
+        Offers Register Form
+      </mat-card-title>
+  <mat-card class="innercard">
+        <form (ngSubmit)="Offersreg(SignupForm)" #SignupForm="ngForm">
+          <mat-form-field>
+            <input type="text"
+                    matInput
+                    name="category"
+                    ngModel
+                    placeholder="Category"
+                    #head= "ngModel" required>
+            <mat-error *ngIf="head.invalid">Please Enter category's name!</mat-error>
+          </mat-form-field> <br> <br>
+
+          <mat-form-field>
+              <input type="text"
+                      matInput
+                      name="name"
+                      ngModel
+                      placeholder="Cake's Name"
+                      #subhead= "ngModel">
+              <mat-error *ngIf="subhead.invalid">Please Enter the cake name!</mat-error>
+            </mat-form-field> <br><br>
+
+            <mat-form-field>
+                <input type="text"
+                        matInput
+                        name="price"
+                        ngModel
+                        placeholder="Price"
+                        #head= "ngModel" required>
+                <mat-error *ngIf="head.invalid">Please Enter the cake's price!</mat-error>
+              </mat-form-field> <br> <br>
+
+              <div class="img">
+                <h6>Please choose your cake's image file</h6>
+                <input type="file" name="image">
+              </div> <br> <br>
+
+            <div class="butn">
+            <button mat-button><b>Submit</b></button>
+          </div>
+        </form> <br>
+  </mat-card>
+</mat-card>
+
+<!-- <router-outlet></router-outlet> -->

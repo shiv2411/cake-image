@@ -1,0 +1,72 @@
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<img class="navlogo" src="../../assets/logo.png" alt="Koolcakes">
+<span class="spacer"></span>
+  <span class="right">
+      <a routerLink="#" class="num"><i class="fas fa-phone"></i>+91 -7829463510</a>
+      <a routerLink="/offers" class="num"> offers</a>
+      <a routerLink="#" class="num"> Partner With Us</a>
+      <a routerLink="#" class="num"> Track Order</a>
+      <a routerLink="#" class="num"> Help</a>
+      <a class="reg" routerLink="/login">Login / </a>
+      <a class="reg" routerLink="/register">Signup</a> <br> <br>
+  <!-- </span>
+  <span class="n_line"> -->
+      <a routerLink="#" class="bot"> <i class="fas fa-search"></i> Search</a>
+      <a routerLink="#" class="bot"> 
+        <i class="fas fa-user-clock"></i> 
+        Delivery in <strong style="color: red;"> 2 Hours</strong>
+      </a>
+      <a routerLink="#" class="bot"> 
+        <i class="fas fa-map-marker-alt"></i> 
+        Delivery In <strong style="color: red;">Choose City</strong>
+      </a>
+      <a routerLink="#" class="bot"> <i class="fas fa-shopping-cart"></i> Cart</a>
+  </span>
+<hr>
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" href="#"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="home">HOME<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="about">ABOUT</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            OUR CAKES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="ourcakes">Our Cakes</a>
+            <a class="dropdown-item" routerLink="birthdaycakes">Birthday Cakes</a>
+            <a class="dropdown-item" routerLink="specialcakes">Special Occasion Cakes</a>
+            <a class="dropdown-item" routerLink="sportscakes">Sports</a>
+          </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " routerLink="news">NEWS</a>
+          </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="offers">OFFERS</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link " routerLink="#">EGG FREE CAKES</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " routerLink="/contact">CONTACT US</a>
+          </li>
+    </ul>
+
+  </div>
+</nav>
+<router-outlet></router-outlet>

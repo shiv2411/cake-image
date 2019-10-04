@@ -1,0 +1,40 @@
+<body>
+    <h3>Welcome to Admin Pannel</h3> <br>
+    <div class="main">
+
+        <div class="offer">        
+            MANAGE OFFERS <br>
+            <a routerLink="/admin/offersreg">
+                <button mat-raised-button (onclick)="OffersRegister();">Offers</button>
+            </a> <br> <br>
+        </div>
+
+        <div class="news">
+            ADD OR EDIT NEWS <br>
+            <a routerLink="/admin/newsregform">
+                  <button mat-raised-button (onclick)="NewsRegister();">News</button>
+            </a> <br> <br>
+        </div>
+
+        <div class="track">
+            CHANGE ORDER STATUS <br>
+            <!-- <a routerLink="http://localhost:3000/"> -->
+                <button mat-raised-button (onclick)="NewsRegister();">Order Status</button> <br> <br>
+        </div>
+
+        <div class="cakes">
+            ADD CAKES <br>
+            <a routerLink="/admin/cakecatreg">
+                <button mat-raised-button (onclick)="CakesRegister();">Category's cake</button>
+        </a><br> <br>
+        </div>
+
+        <div class="cakes">
+                ADD CAKES <br>
+                <a routerLink="/admin/cakereg">
+                    <button mat-raised-button (onclick)="CakesRegister();">Add cake</button>
+            </a><br> <br>
+            </div>
+
+    </div>
+</body>

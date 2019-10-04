@@ -1,0 +1,143 @@
+<mat-card class="abc">
+    <form (ngSubmit)="processForm(SignupForm)" #SignupForm="ngForm" class="border border-light p-5" action="https://formspree.io/kajolkumarisingh222@gmail.com" method="POST" >
+  
+      <p class="h4 mb-4">Cake Description Form
+      </p>
+      <hr>
+      <div class="row" style="margin-top: 5%;">
+          <label for="textInput">How many people do you need to serve? What size cake do you need?</label>
+          <select 
+          class="browser-default custom-select mb-8"
+          id="select" 
+          name="size"
+          matInput
+          ngModel
+          #sizeInput= "ngModel">
+            <option value="" disabled="" selected="">Select Size</option>
+            <option value="8'' x 12'' ">8'' x 12''  80 - 120 Portion*  <strong style="color: red;">£220</strong></option>
+            <option value="10'' x 14''	">10'' x 14''	120 - 160 Portion*	<strong style="color:red;">£270</strong></option>
+          </select>
+      </div>
+
+      <div class="row" style="margin-top: 5%;">
+        <label for="textInput">Do you want vanilla or chocolate sponge?</label>
+        <select class="browser-default custom-select mb-8" 
+                id="select"
+                name="sponge"
+                matInput
+                ngModel
+                #spongeType= "ngModel">
+          <option value="" disabled="" selected="">Select Sponge</option>
+          <option value="vanila sponge cake">	Vanila Sponge Cake</option>
+          <option value="chocolate sponge cake">Chocolate Sponge Cake<strong style="color:red;">(+ £10)</strong></option>
+        </select>
+    </div>
+
+    <div class="row" style="margin-top: 5%;">
+      <label for="textInput">Do you want vanilla or chocolate Cream?</label>
+      <select class="browser-default custom-select mb-8" id="select" 
+              name="cream" 
+              matInput
+              ngModel  
+              #creamType= "ngModel"  >
+        <option value="" disabled="" selected="">Select Cream</option>
+        <option value="vanilla cream">Vanilla Cream</option>
+        <option value="chocolate cream">Chocolate Cream</option>
+      </select>
+  </div>
+
+  <div class="row" style="margin-top: 5%;">
+    <label for="textInput">Do you want your cake to contain eggs?</label>
+    <select class="browser-default custom-select mb-8" 
+            id="select" 
+            name="egg"
+            matInput
+            ngModel  
+            #eggoreggless= "ngModel" >
+      <option value="" disabled="" selected="">Select Egg</option>
+      <option value="Eggless"> Eggless</option>
+      <option value="with egg">With Eggs</option>
+    </select>
+</div>
+
+<div class="row" style="margin-top: 5%;">
+  <label for="textInput">What filling do you want inside your cake?</label>
+  <select class="browser-default custom-select mb-8" 
+          id="select" name="cakefiller"
+          matInput
+          ngModel  
+          #cakeFiller= "ngModel" >
+    <option value="" disabled="" selected="">Select Cake Filler</option>
+    <option value="mixed fruit jam">Mixed Fruit Jam</option>
+    <option value="white butter cream">White Butter Cream</option>
+  </select>
+</div>
+
+<div class="row" style="margin-top: 5%;">
+  <label for="textInput">Would you like to add a message onto the cake?</label>
+  <h6>If you do not want a message, please leave below box empty. We will decorate the cake with your chosen toppings (No Extra Charge).
+    The message on the cake will be written in the same colour as the colour of the ribbon chosen above.</h6>
+    Type the message: 
+    <input type="text" 
+            style="width:800px;border:1px solid black;" 
+            name="message"
+            matInput
+            ngModel  
+            #msg= "ngModel">
+</div> 
+
+<div class="row" style="margin-top: 5%;">
+    <label for="textInput">What colour writing do you want?</label>
+    <select class="browser-default custom-select mb-8" 
+            id="select" 
+            name="messagecolor"
+            matInput
+            ngModel  
+            #msgcolor= "ngModel" >
+      <option value="" disabled="" selected="">Select Colour</option>
+      <option value="blue">Blue</option>
+      <option value="brown">Brown</option>
+      <option value="gold">Gold</option>
+      <option value="light green">Light Green</option>
+      <option value="green">Green</option>
+    </select>
+  </div>
+
+  <div class="row" style="margin-top: 5%;">
+      <label for="textInput">How can we contact you?</label>
+      <h6>Your Full name</h6>
+        <input type="text" 
+                style="width:800px;border:1px solid black;" 
+                name="fullname"
+                matInput
+                ngModel  
+                #fname= "ngModel">
+    </div> 
+  
+    <div class="row" style="margin-top: 5%;">
+      <label for="textInput">Your Mobile number</label>
+    <input type="number" 
+                style="width:800px;border:1px solid black;" 
+                name="mno"
+                matInput
+                ngModel  
+                #mno= "ngModel"
+                onKeyPress="if(this.value.length==10) return false;">
+    </div>
+  
+    <div class="row" style="margin-top: 5%;">
+      <label for="textInput">Your email ID</label>
+    <input type="email" 
+                style="width:800px;border:1px solid black;" 
+                name="email"
+                matInput
+                ngModel  
+                #email= "ngModel">
+    </div>
+    
+  <br> <br>
+
+<!-- <input type="submit" value="Send"> -->
+      <button mat-raised-button color="primary" class="btn btn-info btn-block" type="submit" style="margin-top: 5%;width:25%;margin:auto;" value="Send">Submit</button>
+    </form>
+  </mat-card>

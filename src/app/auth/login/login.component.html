@@ -1,0 +1,37 @@
+<title>Contact</title>
+
+<mat-card class="outercard">
+    <mat-card-title>
+        Login / Signup
+      </mat-card-title>
+  <mat-card class="innercard">
+        <form (ngSubmit)="LoginForm(SignupForm)" #SignupForm="ngForm">
+          <mat-form-field>
+            <input type="email"
+                    matInput
+                    name="email"
+                    ngModel
+                    placeholder="Email ID"
+                    #emailId= "ngModel" required email>
+            <mat-error *ngIf="emailId.invalid">PLease Enter a valid email!</mat-error>
+          </mat-form-field> <br> <br>
+          <mat-form-field>
+              <input type="password"
+                      matInput
+                      name="password"
+                      ngModel
+                      placeholder="Password"
+                      #pass= "ngModel" required>
+              <mat-error *ngIf="pass.invalid">PLease Enter correct Password!</mat-error>
+            </mat-form-field> <br>            
+            <span style="margin-left:100px;font-size: 14px;">Not have an account till now? Make one by clicking 
+                <a routerLink="/register">here!</a></span>
+            <br> <br>
+            <div class="butn">
+            <button mat-button><b>Submit</b></button>
+          </div>
+        </form> <br>
+  </mat-card>
+</mat-card>
+
+<!-- <router-outlet></router-outlet> -->

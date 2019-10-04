@@ -1,0 +1,66 @@
+<title>Contact</title>
+
+<mat-card class="outercard">
+    <mat-card-title>
+        Register / Signin
+      </mat-card-title>
+  <mat-card class="innercard">
+        <form (ngSubmit)="onSignup(SignupForm)" #SignupForm="ngForm">
+                <mat-form-field>
+                        <input type="text"
+                                matInput
+                                name="firstname"
+                                ngModel
+                                placeholder="First Name"
+                                #fname= "ngModel" required>
+                        <mat-error *ngIf="fname.invalid">Please Enter your first name!</mat-error>
+                </mat-form-field> <br>
+                   
+                <mat-form-field>
+                            <input type="text"
+                                    matInput
+                                    name="lastname"
+                                    ngModel
+                                    placeholder="Last Name"
+                                    #lname= "ngModel" required>
+                            <mat-error *ngIf="lname.invalid">Please Enter your last name</mat-error>
+                </mat-form-field> <br>
+                <mat-form-field>
+                <input type="email"
+                        matInput
+                        name="email"
+                        ngModel
+                        placeholder="Email ID"
+                        #emailId= "ngModel" required email>
+                <mat-error *ngIf="emailId.invalid">Please Enter a valid email!</mat-error>
+            </mat-form-field> <br>
+            <mat-form-field>
+                <input type="password"
+                        matInput
+                        name="password"
+                        ngModel
+                        placeholder="Password"
+                        #pass= "ngModel" required>
+                <mat-error *ngIf="pass.invalid">Please Enter Your Password!</mat-error>
+                </mat-form-field> <br>   
+                <mat-form-field>
+                <input type="password"
+                        matInput
+                        name="confirmpassword"
+                        ngModel
+                        placeholder="Confirm Password"
+                        #cpass= "ngModel" required>
+                <mat-error *ngIf="cpass.invalid">Please Enter correct Password!</mat-error>
+                </mat-form-field> <br>  
+
+            <span style="margin-left:120px;font-size: 14px;">Already have an account? Sign in by clicking  
+                <a routerLink="/login">here!</a></span>
+            <br> <br>
+            <div class="butn">
+            <button mat-button><b>Submit</b></button>
+          </div>
+        </form> <br>
+  </mat-card>
+</mat-card>
+
+<!-- <router-outlet></router-outlet> -->
